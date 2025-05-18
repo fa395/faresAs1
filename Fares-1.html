@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>موقع حديث وأنيق</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        nav li {
+            font-size: 1rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 16px rgba(37, 117, 252, 0.25);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background: #ff4081;
+            color: white;
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #e91e63;
+        }
+
+        .features {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .contact {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #2575fc;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2575fc;
+            box-shadow: 0 0 4px #2575fc;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background: #2575fc;
+            color: white;
+            padding: 0.9rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #1a53d3;
+        }
+
+        footer {
+            background: #343a40;
+            color: #bbb;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">موقعي</div>
+            <ul>
+                <li><a href="#features">الخدمات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="قسم التعريف الرئيسي">
+            <h1>مرحبا بكم في موقعي الحديث</h1>
+            <p>هذا الموقع مثال حديث وأنيق للبدء في تطوير موقعك الخاص بسهولة.</p>
+            <button class="btn-primary" id="ctaBtn">ابدأ الآن</button>
+        </section>
+
+        <section class="features" id="features" aria-label="قسم الخدمات">
+            <article class="feature-card" tabindex="0">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">سرعة عالية</h3>
+                <p class="feature-desc">موقعنا يتميز بأداء سريع وتحميل فوري لجميع الصفحات.</p>
+            </article>
+            <article class="feature-card" tabindex="0">
+                <div class="feature-icon">💡</div>
+                <h3 class="feature-title">تصميم مبتكر</h3>
+                <p class="feature-desc">تصميم عصري يتماشى مع أحدث الاتجاهات ليناسب مختلف الأجهزة.</p>
+            </article>
+            <article class="feature-card" tabindex="0">
+                <div class="feature-icon">🔒</div>
+                <h3 class="feature-title">أمان قوي</h3>
+                <p class="feature-desc">نوفر حماية متكاملة للمعلومات والبيانات الخاصة بك بتقنيات حديثة.</p>
+            </article>
+        </section>
+
+        <section class="contact" id="contact" aria-label="نموذج الاتصال">
+            <h2>تواصل معنا</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالتك</label>
+                    <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        © 2024 موقعي. جميع الحقوق محفوظة.
+    </footer>
+
+    <script>
+        const ctaBtn = document.getElementById('ctaBtn');
+        ctaBtn.addEventListener('click', () => {
+            alert('شكراً لاهتمامك! سيتم التواصل معك قريباً.');
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = contactForm.name.value.trim();
+            const email = contactForm.email.value.trim();
+            const message = contactForm.message.value.trim();
+
+            if(name === '' || email === '' || message === '') {
+                alert('يرجى ملء جميع الحقول.');
+                return;
+            }
+
+            alert(`شكراً لك يا ${name}، تم استلام رسالتك.`);
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
+
